@@ -1,4 +1,10 @@
 rootProject.name = 'beshkan'
+include ':react-native-music-metadata'
+project(':react-native-music-metadata').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-music-metadata/android')
+include ':react-native-background-downloader'
+project(':react-native-background-downloader').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-downloader/android')
+include ':rn-fetch-blob'
+project(':rn-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/rn-fetch-blob/android')
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
 includeBuild('../node_modules/react-native-gradle-plugin')
